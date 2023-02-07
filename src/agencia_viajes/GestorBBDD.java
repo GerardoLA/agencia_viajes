@@ -8,7 +8,7 @@ public class GestorBBDD extends Conector{
 	
 	public void insertarCliente(Cliente cliente) throws SQLException {
 		super.conectar();
-		pst=con.prepareStatement("INSERT INTO clientes VALUES (?,?,?,?)");
+		pst=con.prepareStatement("INSERT INTO clientes VALUES (?,?,?,?,?)");
 		pst.setString(1, cliente.getDni());
 		pst.setString(2, cliente.getNombre());
 		pst.setString(3, cliente.getApellidos());

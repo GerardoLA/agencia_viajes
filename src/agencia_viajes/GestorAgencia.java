@@ -1,10 +1,11 @@
 package agencia_viajes;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class GestorAgencia {
 	
-	public static void run(Scanner scan) {
+	public static void run(Scanner scan) throws SQLException {
 		int opcion_menu;
 		
 		do {
@@ -13,6 +14,8 @@ public class GestorAgencia {
 			switch(opcion_menu) {
 			
 			case Menu.GESTIONAR_CLIENTES:
+				GestorClientes.run(scan);
+				
 				break;
 				
 //			case Menu.GESTIONAR_RESERVAS:

@@ -18,7 +18,7 @@ public class GestorClientes {
 			case Menu.ALTA_CLIENTE:
 				cliente = FormularioDeDatos.pedirDatosCliente(scan);
 				gestor.insertarCliente(cliente);
-			
+				System.out.println("Cliente dado de alta");
 				break;
 			}
 			
