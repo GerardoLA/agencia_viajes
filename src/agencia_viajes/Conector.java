@@ -20,4 +20,15 @@ public class Conector {
 			
 	}
 
+	public Connection getCon() {
+		return con;
+	}
+
+	public void setCon(Connection con) {
+		this.con = con;
+	}
+	
+	public void cerrar() throws SQLException {
+		con.close();
+	}
 }
