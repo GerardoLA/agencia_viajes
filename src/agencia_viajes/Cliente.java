@@ -1,6 +1,6 @@
 package agencia_viajes;
 
-public class Clientes {
+public class Cliente {
 	private String 	dni;
 	private String	nombre;
 	private String apellidos;
@@ -29,13 +29,13 @@ public class Clientes {
 	public void setLocalidad(String localidad) {
 		this.localidad = localidad;
 	}
-	public Clientes(String dni, String nombre, String apellidos, String localidad) {
+	public Cliente(String dni, String nombre, String apellidos, String localidad) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.localidad = localidad;
 	}
-	public Clientes() {
+	public Cliente() {
 	}
 	@Override
 	public String toString() {

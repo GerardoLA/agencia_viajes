@@ -1,6 +1,6 @@
 package agencia_viajes;
 
-public class Habitaciones {
+public class Habitacion {
 
 	private int id;
 	private int id_hotel;
@@ -38,14 +38,14 @@ public class Habitaciones {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-	public Habitaciones(int id, int id_hotel, String numero, String descripcion, double precio) {
+	public Habitacion(int id, int id_hotel, String numero, String descripcion, double precio) {
 		this.id = id;
 		this.id_hotel = id_hotel;
 		this.numero = numero;
 		this.descripcion = descripcion;
 		this.precio = precio;
 	}
-	public Habitaciones() {
+	public Habitacion() {
 	}
 	@Override
 	public String toString() {
