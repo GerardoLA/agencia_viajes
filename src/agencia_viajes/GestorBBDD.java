@@ -14,6 +14,9 @@ public class GestorBBDD extends Conector{
 		pst.setString(3, cliente.getApellidos());
 		pst.setString(4, cliente.getDireccion());
 		pst.setString(5, cliente.getLocalidad());
+		
+		pst.execute();
+		super.cerrar();
 	}
 
 }
