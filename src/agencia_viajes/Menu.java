@@ -15,4 +15,31 @@ public class Menu {
 	public static final int VER_CLIENTE = 4;
 	
 
+	
+	public static void mostrarMenuPrincipal() {
+		System.out.println("Menu Principal");
+		System.out.println("1.- Gesionar Clientes");
+		System.out.println("2.-Gesionar habitaciones");
+		System.out.println("3.- Gestionar Hoteles");
+		System.out.println("4.- Gestionar Reservas");
+		
+	}
+	
+	public static void mostrarMenuCliente() {
+		System.out.println("Menu Clientes");
+		System.out.println("1.- Insertar clientes");
+		System.out.println("2.- Eliminar clientes");
+		System.out.println("3.-Modificar Clientes");
+		System.out.println("4.- Ver Clientes");
+	}
+
+
+
+
+
+
+
 }
+
+
+
