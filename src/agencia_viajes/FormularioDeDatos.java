@@ -25,5 +25,23 @@ public class FormularioDeDatos {
 	
 	return cliente;
 	}
+	
+	public static Cliente modificarDatosCliente(Cliente cliente,Scanner scan) {
+		
+		
+		System.out.println("Introduce el  nuevo nombre: ");
+		cliente.setNombre(scan.nextLine());
+		
+		System.out.println("Introduce los apellidos nuevos: ");
+		cliente.setApellidos(scan.nextLine());
+		
+		System.out.println("Introduce la nueva direccion: ");
+		cliente.setDireccion(scan.nextLine());
+		
+		System.out.println("Introduce la nueva localiad: ");
+		cliente.setLocalidad(scan.nextLine());
+		
+		return cliente;
+	}
 
 }
