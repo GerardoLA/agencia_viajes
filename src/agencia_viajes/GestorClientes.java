@@ -22,11 +22,10 @@ public class GestorClientes {
 
 				break;
 			case Menu.MODIFICAR_CLIENTE:
+				String dniCliente= FormularioDeDatos.pedirDniCliente(scan);
 				cliente = FormularioDeDatos.modificarDatosCliente(cliente, scan);
-				gestor.modificarCliente(cliente, null);
+				gestor.modificarCliente(cliente, dniCliente);
 				System.out.println("Cliente modificado");
-			
-			
 			
 			}
 			

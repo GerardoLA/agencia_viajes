@@ -18,8 +18,8 @@ public class Menu {
 	
 	public static void mostrarMenuPrincipal() {
 		System.out.println("Menu Principal");
-		System.out.println("1.- Gesionar Clientes");
-		System.out.println("2.-Gesionar habitaciones");
+		System.out.println("1.- Gestionar Clientes");
+		System.out.println("2.- Gestionar habitaciones");
 		System.out.println("3.- Gestionar Hoteles");
 		System.out.println("4.- Gestionar Reservas");
 		
@@ -29,7 +29,7 @@ public class Menu {
 		System.out.println("Menu Clientes");
 		System.out.println("1.- Insertar clientes");
 		System.out.println("2.- Eliminar clientes");
-		System.out.println("3.-Modificar Clientes");
+		System.out.println("3.- Modificar Clientes");
 		System.out.println("4.- Ver Clientes");
 	}
 

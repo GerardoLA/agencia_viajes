@@ -43,5 +43,12 @@ public class FormularioDeDatos {
 		
 		return cliente;
 	}
+	
+	public static String pedirDniCliente(Scanner scan) {
+		System.out.println("Dni del cliente :");
+		String dni = scan.nextLine();
+	
+		return dni;
+	}
 
 }
