@@ -21,6 +21,13 @@ public class GestorClientes {
 				System.out.println("Cliente dado de alta");
 
 				break;
+			case Menu.MODIFICAR_CLIENTE:
+				cliente = FormularioDeDatos.modificarDatosCliente(cliente, scan);
+				gestor.modificarCliente(cliente, null);
+				System.out.println("Cliente modificado");
+			
+			
+			
 			}
 			
 		}while(opcion!=Menu.SALIR);

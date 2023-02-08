@@ -18,5 +18,20 @@ public class GestorBBDD extends Conector{
 		pst.execute();
 		super.cerrar();
 	}
+	
+	public void modificarCliente(Cliente cliente,String dni) throws SQLException {
+		super.conectar();
+		pst=con.prepareStatement("UPDATE clientes nombre=?,apellidos=?,direccion=?,localidad=? where dni=?");
+		
+		pst.setString(1, cliente.getNombre());
+		pst.setString(2, cliente.getApellidos());
+		pst.setString(3, cliente.getDireccion());
+		pst.setString(4, cliente.getLocalidad());
+		
+		pst.executeUpdate();
+		super.cerrar();
+		
+		
+	}
 
 }
