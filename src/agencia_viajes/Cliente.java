@@ -52,6 +52,6 @@ public class Cliente {
 				+ ", localidad=" + localidad + "]";
 	}
 
-	
+	df
 
 }

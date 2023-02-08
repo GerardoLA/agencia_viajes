@@ -16,7 +16,7 @@ public class GestorClientes {
 			
 			switch(opcion) {
 			case Menu.ALTA_CLIENTE:
-				cliente
+				
 				break;
 			}
 			
