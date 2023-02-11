@@ -29,6 +29,8 @@ public class GestorClientes {
 				
 			case Menu.BAJA_CLIENTE:
 				String dniCiente= FormularioDeDatos.pedirDniCliente(scan);
+				gestor.eliminarCliente(dniCiente);
+				System.out.println("Fulminado");
 				
 			
 			}
