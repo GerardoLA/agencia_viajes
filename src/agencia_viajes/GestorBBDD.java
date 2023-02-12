@@ -3,6 +3,7 @@ package agencia_viajes;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class GestorBBDD extends Conector{
 	PreparedStatement pst;
@@ -60,6 +61,26 @@ public class GestorBBDD extends Conector{
 		cliente.setLocalidad(resultado.getString("localidad"));
 		super.cerrar();
 		return cliente;
+		
+	}
+	public ArrayList<Cliente>getClientes() throws SQLException{
+		ArrayList<Cliente>clientes=new ArrayList<Cliente>();
+		super.conectar();
+		String sentenciaSelect ="SELECT * from Clientes";
+		pst = con.prepareStatement(sentenciaSelect);
+		ResultSet resultado = pst.executeQuery();
+		
+		while (resultado.next()) {
+			Cliente cliente = new Cliente();
+			cliente.setDni(resultado.getString("dni"));
+			cliente.setNombre(resultado.getString("nombre"));
+			cliente.setApellidos(resultado.getString("Apellidps"));
+			cliente.setDireccion(resultado.getString("direccion"));
+			cliente.setLocalidad(resultado.getString("localidad"));
+			clientes.add(cliente);
+		}
+		super.cerrar();
+		return clientes;
 		
 	}
 
