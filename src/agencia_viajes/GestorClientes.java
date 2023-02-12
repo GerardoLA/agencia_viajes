@@ -35,7 +35,8 @@ public class GestorClientes {
 				
 			case Menu.VER_CLIENTE:
 				 dniCliente=FormularioDeDatos.pedirDniCliente(scan);
-				Visor.mostrarCliente(gestor.getCliente(dniCliente));
+				 cliente=gestor.getCliente(dniCliente);
+				Visor.mostrarCliente(cliente);
 				break;
 				
 			case Menu.VER_CLIENTES:
