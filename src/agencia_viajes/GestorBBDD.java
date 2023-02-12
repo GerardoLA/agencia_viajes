@@ -48,11 +48,11 @@ public class GestorBBDD extends Conector{
 	
 	}
 	
-	public Cliente getCliente (String dni) throws SQLException {
+	public Cliente getCliente (String dniCliente) throws SQLException {
 		super.conectar();
-		String sentenciaSelect = "SELECT * from clientes WHERE dni =?";
-		pst =con.prepareStatement(sentenciaSelect);
-		pst.setString(1, dni);
+		String sentenciaSelect = "SELECT * FROM clientes WHERE dni=?";
+		pst=con.prepareStatement(sentenciaSelect);
+		pst.setString(1, dniCliente);
 		Cliente cliente = new Cliente();
 		ResultSet resultado = pst.executeQuery(sentenciaSelect);
 		cliente.setNombre(resultado.getString("nombre"));
@@ -74,7 +74,7 @@ public class GestorBBDD extends Conector{
 			Cliente cliente = new Cliente();
 			cliente.setDni(resultado.getString("dni"));
 			cliente.setNombre(resultado.getString("nombre"));
-			cliente.setApellidos(resultado.getString("Apellidps"));
+			cliente.setApellidos(resultado.getString("Apellidos"));
 			cliente.setDireccion(resultado.getString("direccion"));
 			cliente.setLocalidad(resultado.getString("localidad"));
 			clientes.add(cliente);

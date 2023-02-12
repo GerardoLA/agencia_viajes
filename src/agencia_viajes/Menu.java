@@ -13,6 +13,7 @@ public class Menu {
 	public static final int BAJA_CLIENTE = 2;
 	public static final int MODIFICAR_CLIENTE = 3;
 	public static final int VER_CLIENTE = 4;
+	public static final int VER_CLIENTES = 5;
 	
 
 	
@@ -30,7 +31,8 @@ public class Menu {
 		System.out.println("1.- Insertar clientes");
 		System.out.println("2.- Eliminar clientes");
 		System.out.println("3.- Modificar Clientes");
-		System.out.println("4.- Ver Clientes");
+		System.out.println("4.- Ver Cliente");
+		System.out.println("5.- Ver Clientes");
 	}
 
 
