@@ -22,7 +22,7 @@ public class GestorAgencia {
 				break;
 //				
 			case Menu.GESTIONAR_HOTELES:
-				
+				GestorHoteles.run(scan);
 				
 				break;
 //				
