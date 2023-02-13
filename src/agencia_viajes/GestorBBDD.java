@@ -58,7 +58,8 @@ public class GestorBBDD extends Conector{
 		pst=con.prepareStatement(sentenciaSelect);
 		pst.setString(1,dni);
 		
-		ResultSet resultado = pst.executeQuery(sentenciaSelect);
+		ResultSet resultado = pst.executeQuery();
+		resultado.next();
 		
 		
 		cliente.setDni(resultado.getString("dni"));
