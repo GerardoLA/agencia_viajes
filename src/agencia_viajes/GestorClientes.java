@@ -26,10 +26,23 @@ public class GestorClientes {
 				cliente = FormularioDeDatos.modificarDatosCliente(cliente, scan);
 				gestor.modificarCliente(cliente, dniCliente);
 				System.out.println("Cliente modificado");
+				break;
 				
 			case Menu.BAJA_CLIENTE:
-				String dniCiente= FormularioDeDatos.pedirDniCliente(scan);
+				 gestor.eliminarCliente(FormularioDeDatos.pedirDniCliente(scan));
+				 System.out.println("Cliente elmininado");
+				break;
 				
+			case Menu.VER_CLIENTE:
+				dniCliente = FormularioDeDatos.pedirDniCliente(scan);
+				gestor.getCliente(dniCliente);
+				Visor.mostrarCliente(cliente);
+				 break;
+				
+				
+				
+			case Menu.SALIR:
+				break;
 			
 			}
 			
