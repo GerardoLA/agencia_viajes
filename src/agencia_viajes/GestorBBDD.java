@@ -8,6 +8,21 @@ import java.util.ArrayList;
 public class GestorBBDD extends Conector{
 	PreparedStatement pst;
 	
+	public void darAltaHotel(Hotel hotel) throws SQLException {
+		super.conectar();
+		pst=con.prepareStatement("INSERT INTO hoteles VALUES (?,?,?,?,?,?)");
+		pst.setString(1, hotel.getCif());
+		pst.setString(2,hotel.getNombre());
+		pst.setString(3, hotel.getGerente());
+		pst.setInt(4, hotel.getEstrellas());
+		pst.setString(5, hotel.getCompania());
+		
+		pst.execute();
+		super.cerrar();
+		
+		
+	}
+	
 	public void insertarCliente(Cliente cliente) throws SQLException {
 		super.conectar();
 		pst=con.prepareStatement("INSERT INTO clientes VALUES (?,?,?,?,?)");

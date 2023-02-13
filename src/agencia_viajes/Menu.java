@@ -1,5 +1,7 @@
 package agencia_viajes;
 
+import com.mysql.cj.protocol.PacketReceivedTimeHolder;
+
 public class Menu {
 	
 	public static final int GESTIONAR_CLIENTES = 1;
@@ -14,6 +16,10 @@ public class Menu {
 	public static final int MODIFICAR_CLIENTE = 3;
 	public static final int VER_CLIENTE = 4;
 	public static final int VER_CLIENTES = 5;
+	
+	public static final int ALTA_HOTEL=1;
+	public static final int BAJA_HOTEL=2;
+			
 	
 	public static final int REALIZAR_RESERVA=1;
 	public static final int ANULAR_RESERVA=1;
@@ -39,6 +45,18 @@ public class Menu {
 		System.out.println("5.- Ver Clientes");
 	}
 	
+	public static void mostrarMenuHoteles() {
+		System.out.println("MENU HOTELES");
+		System.out.println("1.- Dar de alta Hotel: ");
+		System.out.println("2.- eliminar hote");
+		System.out.println("3.- Ver Hotel");
+		
+		
+		
+		
+		
+		
+	}
 	public static void mostrarMenuReservas() {
 		System.out.println("MENU RESERVAS");
 		System.out.println("1.- Realizar reserva: ");

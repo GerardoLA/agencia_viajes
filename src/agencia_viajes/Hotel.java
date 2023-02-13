@@ -7,6 +7,7 @@ public class Hotel {
 	private String gerente;
 	private int estrellas;
 	private String compania;
+	
 	public int getId() {
 		return id;
 	}
