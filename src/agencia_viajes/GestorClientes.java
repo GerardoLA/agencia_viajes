@@ -30,24 +30,24 @@ public class GestorClientes {
 				
 			case Menu.BAJA_CLIENTE:
 
-				 gestor.eliminarCliente(FormularioDeDatos.pedirDniCliente(scan));
-				 System.out.println("Cliente elmininado");
+				dniCliente= FormularioDeDatos.pedirDniCliente(scan);
+				gestor.eliminarCliente(dniCliente);
+				System.out.println("Fulminado");
 				break;
-
-			
-
 				
 			case Menu.VER_CLIENTE:
-				dniCliente = FormularioDeDatos.pedirDniCliente(scan);
-				gestor.getCliente(dniCliente);
+
+
+				 dniCliente=FormularioDeDatos.pedirDniCliente(scan);
+				 cliente=gestor.getCliente(dniCliente);
 				Visor.mostrarCliente(cliente);
-				 break;
-				
-				
-				
-			case Menu.SALIR:
 				break;
-			
+				
+			case Menu.VER_CLIENTES:
+				Visor.mostrarClientes(gestor.getClientes());
+	
+				break;
+
 			}
 			
 		}while(opcion!=Menu.SALIR);
