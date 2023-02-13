@@ -29,9 +29,13 @@ public class GestorClientes {
 				break;
 				
 			case Menu.BAJA_CLIENTE:
+
 				 gestor.eliminarCliente(FormularioDeDatos.pedirDniCliente(scan));
 				 System.out.println("Cliente elmininado");
 				break;
+
+			
+
 				
 			case Menu.VER_CLIENTE:
 				dniCliente = FormularioDeDatos.pedirDniCliente(scan);
