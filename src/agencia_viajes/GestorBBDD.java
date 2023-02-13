@@ -1,6 +1,7 @@
 package agencia_viajes;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class GestorBBDD extends Conector{
@@ -37,13 +38,28 @@ public class GestorBBDD extends Conector{
 	
 	public void eliminarCliente(String dni) throws SQLException {
 		super.conectar();
-		pst=con.prepareStatement("DELETE from clientes where id = ?");
+		pst=con.prepareStatement("DELETE from clientes where dni = ?");
 		pst.setString(1,dni);
 		pst.execute();
-		System.out.println("Cliente eliminado");
+		
 		
 		super.cerrar();
 	
+	}
+	
+	public Cliente getCliente(String dni) throws SQLException {
+		super.conectar();
+		String sentenciaSelect = "SELECT * from clientes where dni=?";
+		pst = con.prepareStatement(sentenciaSelect);
+		pst.setString(1, dni);
+		Cliente cliente = new Cliente();
+		ResultSet resultado = pst.executeQuery(sentenciaSelect);
+		resultado.next();
+	
+		
+		
+		return cliente;
+		
 	}
 
 }
