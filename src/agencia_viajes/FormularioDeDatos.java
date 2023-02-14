@@ -4,6 +4,28 @@ import java.util.Scanner;
 
 public class FormularioDeDatos {
 	
+	public static Habitacion pedirDatosHabitacion(Scanner scan) {
+		Habitacion habitacion=new Habitacion();
+		
+		System.out.println("introduce id : ");
+		habitacion.setId(Integer.parseInt(scan.nextLine()));
+		
+		System.out.println("Introduce la id de hotel: ");
+		habitacion.setId_hotel(Integer.parseInt(scan.nextLine()));
+		
+		System.out.println("introduce el numero de habitacion: ");
+		habitacion.setNumero(scan.nextLine());
+		
+		System.out.println("Introduce la descripcion: ");
+		habitacion.setDescripcion(scan.nextLine());
+		
+		System.out.println("Introduce el precio por noche: ");
+		habitacion.setPrecio(Double.parseDouble(scan.nextLine()));
+		
+	return habitacion;
+	
+	}
+	
 	public static Hotel pedirDatosHotel(Scanner scan) {
 		Hotel hotel =new Hotel();
 		

@@ -25,6 +25,10 @@ public class GestorAgencia {
 				GestorHoteles.run(scan);
 				
 				break;
+				
+			case Menu.GESTIONAR_HABITACIONES:
+				GestorHabitaciones.run(scan);
+				break;
 //				
 //			case Menu.GESTIONAR_RESERVAS:
 //				break;

@@ -19,6 +19,10 @@ public class Menu {
 	
 	public static final int ALTA_HOTEL=1;
 	public static final int BAJA_HOTEL=2;
+	
+	public static final int ANADIR_HABITACION=1;
+	public static final int ELIMINAR_HABITACION=2;
+	
 			
 	
 	public static final int REALIZAR_RESERVA=1;
@@ -55,7 +59,7 @@ public class Menu {
 	}
 		public static void mostrarMenuHabitaciones() {
 			System.out.println("MENU HABITACIONES");
-			System.out.println("1 .- Insertar habitacion");
+			System.out.println("1 .- anadir habitacion");
 			System.out.println("2.- eliminar habitación: ");
 			System.out.println("0 .- Salir");
 		}
