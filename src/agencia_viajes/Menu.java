@@ -43,6 +43,7 @@ public class Menu {
 		System.out.println("3.- Modificar Clientes");
 		System.out.println("4.- Ver Cliente");
 		System.out.println("5.- Ver Clientes");
+		System.out.println("0.- Salir ");
 	}
 	
 	public static void mostrarMenuHoteles() {
@@ -50,6 +51,7 @@ public class Menu {
 		System.out.println("1.- Dar de alta Hotel: ");
 		System.out.println("2.- eliminar hote");
 		System.out.println("3.- Ver Hotel");
+		System.out.println("0.- Salir ");
 		
 		
 		
