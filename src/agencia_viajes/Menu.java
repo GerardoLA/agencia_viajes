@@ -49,16 +49,23 @@ public class Menu {
 	public static void mostrarMenuHoteles() {
 		System.out.println("MENU HOTELES");
 		System.out.println("1.- Dar de alta Hotel: ");
-		System.out.println("2.- eliminar hote");
+		System.out.println("2.- eliminar hotel");
 		System.out.println("3.- Ver Hotel");
 		System.out.println("0.- Salir ");
-		
-		
-		
-		
-		
-		
 	}
+		public static void mostrarMenuHabitaciones() {
+			System.out.println("MENU HABITACIONES");
+			System.out.println("1 .- Insertar habitacion");
+			System.out.println("2.- eliminar habitación: ");
+			System.out.println("0 .- Salir");
+		}
+		
+		
+		
+		
+		
+		
+	
 	public static void mostrarMenuReservas() {
 		System.out.println("MENU RESERVAS");
 		System.out.println("1.- Realizar reserva: ");
