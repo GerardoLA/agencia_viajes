@@ -10,7 +10,7 @@ public class GestorBBDD extends Conector{
 	
 	public void darAltaHotel(Hotel hotel) throws SQLException {
 		super.conectar();
-		pst=con.prepareStatement("INSERT INTO hoteles VALUES (?,?,?,?,?,?)");
+		pst=con.prepareStatement("INSERT INTO hoteles(cif,nombre,gerente,estrellas,compania)VALUES (?,?,?,?,?)");
 		pst.setString(1, hotel.getCif());
 		pst.setString(2,hotel.getNombre());
 		pst.setString(3, hotel.getGerente());
