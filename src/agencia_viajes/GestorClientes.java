@@ -1,6 +1,7 @@
 package agencia_viajes;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestorClientes {
@@ -54,5 +55,9 @@ public class GestorClientes {
 			
 		}while(opcion!=Menu.SALIR);
 	}
-
+	private static void ordenarNombre(ArrayList<Cliente> nombres) {
+		OdenacionPorNombre ordena=new OdenacionPorNombre();
+		nombres.sort(ordena);
+		
+	}
 }
