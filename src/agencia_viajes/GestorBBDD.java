@@ -1,5 +1,6 @@
 package agencia_viajes;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,9 +9,26 @@ import java.util.ArrayList;
 public class GestorBBDD extends Conector{
 	PreparedStatement pst;
 	
+	public void realizarReserva(Reserva reserva) throws SQLException {
+		super.conectar();
+		pst=con.prepareStatement("INSERT INTO reservas(id,id_habitacion,dni,desde,hasta)VALUES(?,?,?,?,?)");
+		pst.setInt(1, reserva.getId());
+		pst.setInt(2, reserva.getId_habitacion());
+		pst.setString(3, reserva.getDni());
+		pst.setDate(4, new Date(reserva.getDesde().getTime()));
+		pst.setDate(5, new Date(reserva.getHasta().getTime()));
+		pst.execute();
+		super.cerrar();
+	}
+	
 	public void añadirHabitacion(Habitacion habitacion) throws SQLException {
 		super.conectar();
 		pst=con.prepareStatement("INSERT INTO habitaciones(id,id_hotel,numero,descripcion,precio)VALUES(?,?,?,?,?)");
+		pst.setInt(1, habitacion.getId());
+		pst.setInt(2, habitacion.getId_hotel());
+		pst.setString(3, habitacion.getNumero());
+		pst.setString(4, habitacion.getDescripcion());
+		pst.setDouble(5, habitacion.getPrecio());		
 		pst.execute();
 		super.cerrar();
 	}

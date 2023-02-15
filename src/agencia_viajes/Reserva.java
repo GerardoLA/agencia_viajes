@@ -1,6 +1,6 @@
 package agencia_viajes;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Reserva {
 	private int id;
@@ -8,6 +8,8 @@ public class Reserva {
 	private String dni;
 	private Date desde;
 	private Date hasta;
+	
+	
 	public int getId() {
 		return id;
 	}

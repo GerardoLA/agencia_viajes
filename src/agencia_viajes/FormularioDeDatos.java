@@ -1,8 +1,29 @@
 package agencia_viajes;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class FormularioDeDatos {
+	
+	public static Reserva pedirDatosReserva(Scanner scan) throws ParseException {
+		Reserva reserva=new Reserva();
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+		
+		System.out.println("introduse la id de la habitacion: ");
+		reserva.setId_habitacion(Integer.parseInt(scan.nextLine()));
+		
+		System.out.println("Introduce el dni: ");
+		reserva.setDni(scan.nextLine());
+		
+		System.out.println("introduce la fecha de entrada, formato(dd/mm/yyyy)");
+		reserva.setDesde(format.parse(scan.nextLine()));
+		
+		System.out.println("introduce fecha de salida, formato (dd/mm/yyyy)");
+		reserva.setHasta(format.parse(scan.nextLine()));
+		
+		return reserva;
+	}
 	
 	public static Habitacion pedirDatosHabitacion(Scanner scan) {
 		Habitacion habitacion=new Habitacion();

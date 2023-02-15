@@ -1,11 +1,12 @@
 package agencia_viajes;
 
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class GestorAgencia {
 	
-	public static void run(Scanner scan) throws SQLException {
+	public static void run(Scanner scan) throws SQLException, ParseException {
 		int opcion_menu;
 		
 		do {
@@ -18,9 +19,8 @@ public class GestorAgencia {
 				
 				break;
 				
-			case Menu.GESTIONAR_RESERVAS:
-				break;
-//				
+			
+
 			case Menu.GESTIONAR_HOTELES:
 				GestorHoteles.run(scan);
 				
@@ -30,7 +30,8 @@ public class GestorAgencia {
 				GestorHabitaciones.run(scan);
 				break;
 //				
-//			case Menu.GESTIONAR_RESERVAS:
+			case Menu.GESTIONAR_RESERVAS:
+				GestorReservas.run(scan);
 //				break;
 			case Menu.SALIR:
 				System.out.println("Agur benhur");
