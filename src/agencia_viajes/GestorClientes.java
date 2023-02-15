@@ -29,15 +29,12 @@ public class GestorClientes {
 				break;
 				
 			case Menu.BAJA_CLIENTE:
-
 				dniCliente= FormularioDeDatos.pedirDniCliente(scan);
 				gestor.eliminarCliente(dniCliente);
 				System.out.println("Fulminado");
 				break;
 				
 			case Menu.VER_CLIENTE:
-
-
 				 dniCliente=FormularioDeDatos.pedirDniCliente(scan);
 				 cliente=gestor.getCliente(dniCliente);
 				Visor.mostrarCliente(cliente);
@@ -47,8 +44,13 @@ public class GestorClientes {
 				Visor.mostrarClientes(gestor.getClientes());
 	
 				break;
-
+			case Menu.CLIENTES_ORDENADOS_NOMBRE:
+				
+				
+				
 			}
+			
+			
 			
 		}while(opcion!=Menu.SALIR);
 	}

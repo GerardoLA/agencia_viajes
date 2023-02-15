@@ -16,6 +16,8 @@ public class Menu {
 	public static final int MODIFICAR_CLIENTE = 3;
 	public static final int VER_CLIENTE = 4;
 	public static final int VER_CLIENTES = 5;
+	public static final int CLIENTES_ORDENADOS_NOMBRE = 6;
+	public static final int CLIENTES_ORDENADOS_APELLIDOS =7;
 	
 	public static final int ALTA_HOTEL=1;
 	public static final int BAJA_HOTEL=2;
@@ -47,6 +49,8 @@ public class Menu {
 		System.out.println("3.- Modificar Clientes");
 		System.out.println("4.- Ver Cliente");
 		System.out.println("5.- Ver Clientes");
+		System.out.println("6.- Clientes ordenados por nombre");
+		System.out.println("7.- Clientes ordenados por apellidos");
 		System.out.println("0.- Salir ");
 	}
 	
@@ -64,12 +68,7 @@ public class Menu {
 			System.out.println("0 .- Salir");
 		}
 		
-		
-		
-		
-		
-		
-	
+			
 	public static void mostrarMenuReservas() {
 		System.out.println("MENU RESERVAS");
 		System.out.println("1.- Realizar reserva: ");
