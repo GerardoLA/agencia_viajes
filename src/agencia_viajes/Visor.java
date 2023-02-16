@@ -15,5 +15,7 @@ public class Visor {
 	public static void mostrarCliente(Cliente cliente) {
 		System.out.println(cliente);
 	}
-
 }
+
+	
+	

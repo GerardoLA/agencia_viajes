@@ -46,6 +46,12 @@ public class GestorClientes {
 	
 				break;
 			case Menu.CLIENTES_ORDENADOS_NOMBRE:
+				ordenarNombre(gestor.getClientes());
+				break;
+				
+			case Menu.CLIENTES_ORDENADOS_APELLIDOS:
+				ordenarApellidos(gestor.getClientes());
+				break;
 				
 				
 				
@@ -58,6 +64,11 @@ public class GestorClientes {
 	private static void ordenarNombre(ArrayList<Cliente> nombres) {
 		OdenacionPorNombre ordena=new OdenacionPorNombre();
 		nombres.sort(ordena);
-		
+		Visor.mostrarClientes(nombres);
 	}
+	private static void ordenarApellidos(ArrayList<Cliente> apellidos) {
+		OrdenacionClientePorApellido ordena=new OrdenacionClientePorApellido();
+		apellidos.sort(ordena);
+		Visor.mostrarClientes(apellidos);
+		}
 }
