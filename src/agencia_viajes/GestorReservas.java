@@ -19,6 +19,7 @@ public class GestorReservas {
 			case Menu.REALIZAR_RESERVA:
 				reserva = FormularioDeDatos.pedirDatosReserva(scan);
 				gestor.realizarReserva(reserva);
+				System.out.println("Reserva realizada con exito!");
 				
 			}
 		
