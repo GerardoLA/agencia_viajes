@@ -53,7 +53,11 @@ public class GestorClientes {
 				ordenarApellidos(gestor.getClientes());
 				break;
 				
+			case  Menu.BUSCAR_CADENA_EN_CLIENTE:
+				String cadena = FormularioDeDatos.pedirCadenaCliente(scan);
 				
+				Visor.mostrarClientes(gestor.buscarCadena(cadena));
+				break;
 				
 			}
 			

@@ -9,6 +9,30 @@ import java.util.ArrayList;
 public class GestorBBDD extends Conector{
 	PreparedStatement pst;
 	
+	public ArrayList<Cliente> buscarCadena(String cadena) throws SQLException {
+		super.conectar();
+		ArrayList<Cliente>clientes=new ArrayList<Cliente>();
+		pst=con.prepareStatement("Select nombre FROM clientes where nombre ='%'?'%' or apellidos='%'?'%';");
+		pst.setString(1, cadena);
+		pst.setString(2, cadena);
+		ResultSet resultado = pst.executeQuery();
+		
+		while (resultado.next()) {
+			Cliente cliente = new Cliente();
+			cliente.setDni(resultado.getString("dni"));
+			cliente.setNombre(resultado.getString("nombre"));
+			cliente.setApellidos(resultado.getString("Apellidos"));
+			cliente.setDireccion(resultado.getString("direccion"));
+			cliente.setLocalidad(resultado.getString("localidad"));
+			clientes.add(cliente);
+		}
+		pst.execute();
+		super.cerrar();
+		return clientes;
+		
+	
+	}
+	
 	public void realizarReserva(Reserva reserva) throws SQLException {
 		super.conectar();
 		pst=con.prepareStatement("INSERT INTO reservas(id,id_habitacion,dni,desde,hasta)VALUES(?,?,?,?,?)");
