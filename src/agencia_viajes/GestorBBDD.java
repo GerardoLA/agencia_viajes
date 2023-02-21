@@ -12,9 +12,12 @@ public class GestorBBDD extends Conector{
 	public ArrayList<Cliente> buscarCadena(String cadena) throws SQLException {
 		super.conectar();
 		ArrayList<Cliente>clientes=new ArrayList<Cliente>();
-		pst=con.prepareStatement("Select nombre FROM clientes where nombre ='%'?'%' or apellidos='%'?'%';");
-		pst.setString(1, cadena);
-		pst.setString(2, cadena);
+		String sentencia="Select * FROM clientes where nombre =? or apellidos=?";
+		pst=con.prepareStatement(sentencia);
+		
+		pst.setString(1, "%"+cadena+"%");
+		pst.setString(2, "%"+cadena+"%");
+	
 		ResultSet resultado = pst.executeQuery();
 		
 		while (resultado.next()) {
@@ -25,6 +28,7 @@ public class GestorBBDD extends Conector{
 			cliente.setDireccion(resultado.getString("direccion"));
 			cliente.setLocalidad(resultado.getString("localidad"));
 			clientes.add(cliente);
+			
 		}
 		pst.execute();
 		super.cerrar();

@@ -55,8 +55,6 @@ public class GestorClientes {
 				
 			case  Menu.BUSCAR_CADENA_EN_CLIENTE:
 				String cadena = FormularioDeDatos.pedirCadenaCliente(scan);
-				
-				
 				Visor.mostrarClientes(gestor.buscarCadena(cadena));
 				break;
 				
