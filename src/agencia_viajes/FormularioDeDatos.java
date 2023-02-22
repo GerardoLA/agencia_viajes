@@ -6,6 +6,13 @@ import java.util.Scanner;
 
 public class FormularioDeDatos {
 	
+	public static String  pedirCadenaCliente(Scanner scan) {
+		System.out.println("introduce la cadena: ");
+		String cadena = scan.nextLine();
+		
+		return cadena;
+	}
+	
 	public static Reserva pedirDatosReserva(Scanner scan) throws ParseException {
 		Reserva reserva=new Reserva();
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");

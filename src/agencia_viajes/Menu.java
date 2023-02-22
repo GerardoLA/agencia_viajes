@@ -1,7 +1,7 @@
 
 package agencia_viajes;
 
-import com.mysql.cj.protocol.PacketReceivedTimeHolder;
+
 
 public class Menu {
 	
@@ -19,6 +19,7 @@ public class Menu {
 	public static final int VER_CLIENTES = 5;
 	public static final int CLIENTES_ORDENADOS_NOMBRE = 6;
 	public static final int CLIENTES_ORDENADOS_APELLIDOS =7;
+	public static final int BUSCAR_CADENA_EN_CLIENTE =8;
 	
 	public static final int ALTA_HOTEL=1;
 	public static final int BAJA_HOTEL=2;
@@ -52,6 +53,7 @@ public class Menu {
 		System.out.println("5.- Ver Clientes");
 		System.out.println("6.- Clientes ordenados por nombre");
 		System.out.println("7.- Clientes ordenados por apellidos");
+		System.out.println("8.- Buscar cliente con esta cadena: ");
 		System.out.println("0.- Salir ");
 	}
 	
