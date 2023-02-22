@@ -28,8 +28,7 @@ public class FormularioDeDatos {
 	public static Habitacion pedirDatosHabitacion(Scanner scan) {
 		Habitacion habitacion=new Habitacion();
 		
-		System.out.println("introduce id : ");
-		habitacion.setId(Integer.parseInt(scan.nextLine()));
+		
 		
 		System.out.println("Introduce la id de hotel: ");
 		habitacion.setId_hotel(Integer.parseInt(scan.nextLine()));
