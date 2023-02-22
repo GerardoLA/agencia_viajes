@@ -191,6 +191,7 @@ public class GestorBBDD extends Conector{
 		
 		while(resultado.next()) {
 			Habitacion habitacion=new Habitacion();
+			habitacion.setId(resultado.getInt("id"));
 			habitacion.setId_hotel(resultado.getInt("id_hotel"));
 			habitacion.setNumero(resultado.getString("numero"));
 			habitacion.setDescripcion(resultado.getString("descripcion"));
@@ -198,7 +199,8 @@ public class GestorBBDD extends Conector{
 			habitaciones.add(habitacion);
 			
 			super.cerrar();
-			return habitaciones;	
+			return habitaciones;
+			
 		}
 	
 		return habitaciones;
