@@ -23,12 +23,12 @@ public class GestorBBDD extends Conector{
 	
 	public void añadirHabitacion(Habitacion habitacion) throws SQLException {
 		super.conectar();
-		pst=con.prepareStatement("INSERT INTO habitaciones(id,id_hotel,numero,descripcion,precio)VALUES(?,?,?,?,?)");
-		pst.setInt(1, habitacion.getId());
-		pst.setInt(2, habitacion.getId_hotel());
-		pst.setString(3, habitacion.getNumero());
-		pst.setString(4, habitacion.getDescripcion());
-		pst.setDouble(5, habitacion.getPrecio());		
+		pst=con.prepareStatement("INSERT INTO habitaciones(id_hotel,numero,descripcion,precio)VALUES(?,?,?,?)");
+		
+		pst.setInt(1, habitacion.getId_hotel());
+		pst.setString(2, habitacion.getNumero());
+		pst.setString(3, habitacion.getDescripcion());
+		pst.setDouble(4, habitacion.getPrecio());		
 		pst.execute();
 		super.cerrar();
 	}
@@ -79,7 +79,7 @@ public class GestorBBDD extends Conector{
 	
 	public void eliminarCliente(String dni) throws SQLException {
 		super.conectar();
-		pst=con.prepareStatement("DELETE from clientes where dni = ?");
+		pst=con.prepareStatement("DELETE from clientes where dni=?");
 		pst.setString(1,dni);
 		pst.execute();
 		
@@ -132,5 +132,42 @@ public class GestorBBDD extends Conector{
 
 		
 	}
-
+	
+	public Hotel saberIdHotel(String nombre) throws SQLException {
+		super.conectar();
+		Hotel hotel=new Hotel();
+		String sentenciaSelect="SELECT id from hoteles where nombre=?";
+		
+		pst=con.prepareStatement(sentenciaSelect);
+		pst.setString(1, nombre);
+		
+		ResultSet resultado=pst.executeQuery();
+		resultado.next();
+		
+		hotel.setId(resultado.getInt("id"));
+		super.cerrar();
+		System.out.println("La id del hotel"+ nombre+ " es : " + hotel.getId());
+		return hotel;
+		
+	}
+	
+	
+	
+	
+//	public ArrayList<Hotel>buscarIdHotel() throws SQLException{
+//		ArrayList<Hotel>buscaId=new ArrayList<Hotel>();
+//		super.conectar();
+//		String sentenciaSelect = "SELECT id from hoteles where nombre=? ";
+//		pst=con.prepareStatement(sentenciaSelect);
+//		pst.setInt(1,String nombre);
+//		
+//		ResultSet resultado= pst.executeQuery();
+//		
+//		while(resultado.next()) {
+//			Hotel hotel =new Hotel();
+//			hotel.setId(resultado.getInt("id"));
+//		}
+//		return buscaId;	
+//		
+//	}
 }
