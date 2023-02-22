@@ -261,7 +261,7 @@ public class GestorBBDD extends Conector{
 			reserva.setDesde(resultado.getDate("desde"));
 			reserva.setHasta(resultado.getDate("hasta"));
 			reservas.add(reserva);
-			
+			 
 			
 		}
 		
