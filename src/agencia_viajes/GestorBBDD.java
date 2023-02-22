@@ -204,13 +204,13 @@ public class GestorBBDD extends Conector{
 		return habitaciones;
 	}
 	
-	public Hotel getHotel(String nombreHotel) {
+	public Hotel getHotel(String nombreHotel) throws SQLException {
 		super.conectar();
 		Hotel hotel=new Hotel();
 		
 		String sentenciaSelect="SELECT * from hoteles where nombre=?";
 		pst=con.prepareStatement(sentenciaSelect);
-		pst.setString(1, nombreHotel);
+		pst.setString(1,nombreHotel);
 		
 		ResultSet resultado=pst.executeQuery();
 		resultado.next();
@@ -246,4 +246,4 @@ public class GestorBBDD extends Conector{
 //		return buscaId;	
 //		
 //	}
-}
+
