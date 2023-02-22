@@ -247,6 +247,28 @@ public class GestorBBDD extends Conector{
 		return reserva;
 	}
 	
+	public ArrayList<Reserva>getReservas() throws SQLException{
+		ArrayList<Reserva>reservas=new ArrayList<Reserva>();
+		super.conectar();
+		pst=con.prepareStatement("SELECT* from reservas");
+		ResultSet resultado=pst.executeQuery();
+		
+		while(resultado.next()) {
+			Reserva reserva=new Reserva();
+			reserva.setId(resultado.getInt("id"));
+			reserva.setId_habitacion(resultado.getInt("id_habitacion"));
+			reserva.setDni(resultado.getString("dni"));
+			reserva.setDesde(resultado.getDate("desde"));
+			reserva.setHasta(resultado.getDate("hasta"));
+			reservas.add(reserva);
+			
+			
+		}
+		
+		super.cerrar();
+		return reservas;
+	}
+	
 	
 	
 }
