@@ -198,18 +198,35 @@ public class GestorBBDD extends Conector{
 			habitaciones.add(habitacion);
 			
 			super.cerrar();
-			return habitaciones;
-			
-			
+			return habitaciones;	
 		}
 	
-		
-		
-		
 		return habitaciones;
 	}
 	
-	
+	public Hotel getHotel(String nombreHotel) {
+		super.conectar();
+		Hotel hotel=new Hotel();
+		
+		String sentenciaSelect="SELECT * from hoteles where nombre=?";
+		pst=con.prepareStatement(sentenciaSelect);
+		pst.setString(1, nombreHotel);
+		
+		ResultSet resultado=pst.executeQuery();
+		resultado.next();
+		
+		hotel.setCif(resultado.getString("cif"));
+		hotel.setNombre(resultado.getString("nombre"));
+		hotel.setGerente(resultado.getString("gerente"));
+		hotel.setEstrellas(resultado.getInt("estrellas"));
+		hotel.setCompania(resultado.getString("compania"));
+		
+		super.cerrar();
+		return hotel;
+		
+		
+	}
+}
 	
 	
 	
