@@ -23,6 +23,8 @@ public class Menu {
 	
 	public static final int ALTA_HOTEL=1;
 	public static final int BAJA_HOTEL=2;
+	public static final int VER_HOTEL=3;
+	public static final int VER_HOTELES=4;
 	
 	public static final int ANADIR_HABITACION=1;
 	public static final int ELIMINAR_HABITACION=2;
@@ -62,6 +64,7 @@ public class Menu {
 		System.out.println("1.- Dar de alta Hotel: ");
 		System.out.println("2.- eliminar hotel");
 		System.out.println("3.- Ver Hotel");
+		System.out.println("4.- Ver HotelES");
 		System.out.println("0.- Salir ");
 	}
 		public static void mostrarMenuHabitaciones() {

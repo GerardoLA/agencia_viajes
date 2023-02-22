@@ -122,5 +122,10 @@ public class FormularioDeDatos {
 	
 		return dni;
 	}
+	public static String pedirNombreHotel(Scanner scan) {
+		System.out.println("nombre del hotel: ");
+		String nombreHotel=scan.nextLine();
+		return nombreHotel;
+	}
 
 }
