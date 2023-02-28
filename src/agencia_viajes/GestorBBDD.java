@@ -17,6 +17,7 @@ public class GestorBBDD extends Conector{
 		
 		pst.setString(1, "%"+cadena+"%");
 		pst.setString(2, "%"+cadena+"%");
+		
 	
 		ResultSet resultado = pst.executeQuery();
 		
