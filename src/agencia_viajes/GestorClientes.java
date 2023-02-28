@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class GestorClientes {
 	public static void run (Scanner scan) throws SQLException {
 	
